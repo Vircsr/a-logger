@@ -1,13 +1,25 @@
 package log;
 
+/**
+ * 日志级别枚举类
+ */
 public enum LogLevel {
-    INFO("info"), DEBUG("debug"), WARNING("warning"), ERROR("error");
-    private String info;
-    private LogLevel(String info) {
-        this.info = info;
+    INFO(1), DEBUG(2), WARNING(3), ERROR(4),FATAL(5);
+    private int level;
+    private LogLevel(int level) {
+        this.level = level;
     }
 
-    public String getInfo() {
-        return info;
+    public int getLevel() {
+        return level;
+    }
+
+    public static String getNameByValue(int level){
+        for (LogLevel logLevel:LogLevel.values()){
+            if (level == logLevel.level){
+                return logLevel.name();
+            }
+        }
+        return null;
     }
 }
