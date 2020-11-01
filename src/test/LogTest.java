@@ -5,8 +5,8 @@ import log.LogManager;
 
 public class LogTest {
     public static void main(String[] args) {
-        System.out.println(LogLevel.DEBUG);
-        System.out.println(LogLevel.getNameByValue(1));
+//        System.out.println(LogLevel.DEBUG);
+//        System.out.println(LogLevel.getNameByValue(1));
         LogManager.getInstance(LogLevel.INFO,"this is an info.");
         try{
             Thread.sleep(3000);

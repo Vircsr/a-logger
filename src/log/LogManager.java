@@ -11,7 +11,7 @@ public class LogManager {
     private AbstractLogger logger;
     private LogManager(){
         AbstractLogger errorLogger = new ErrorLogger(LogLevel.ERROR.getLevel());
-        AbstractLogger fileLogger = new FileLogger(LogLevel.DEBUG.getLevel());
+        AbstractLogger fileLogger = new FileLogger(LogLevel.WARNING.getLevel());
         AbstractLogger consoleLogger = new ConsoleLogger(LogLevel.INFO.getLevel());
 
         errorLogger.setNextLogger(fileLogger);

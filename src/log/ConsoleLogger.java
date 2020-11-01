@@ -2,7 +2,6 @@ package log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.SimpleTimeZone;
 
 /**
  * 命令行记录
